@@ -162,39 +162,95 @@ def ocr_frames(video):
 
 def transcribe(video):
     try:
+        import numpy as np
         from faster_whisper import WhisperModel
     except Exception as e:
         return None, f"speech-to-text unavailable ({e})"
     try:
-        model = WhisperModel("base.en", device="cpu", compute_type="int8")
-        segs, _ = model.transcribe(video, beam_size=1, vad_filter=True)
+        # Decode with ffmpeg ourselves (avoids PyAV version problems inside faster-whisper)
+        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", video, "-ac", "1", "-ar", "16000",
+                              "-f", "f32le", "-"], capture_output=True, timeout=300).stdout
+        audio = np.frombuffer(raw, dtype=np.float32)
+        if audio.size == 0:
+            return None, "speech-to-text failed (no audio track)"
+        model = WhisperModel("small.en", device="cpu", compute_type="int8")
+        segs, _ = model.transcribe(audio, beam_size=1, vad_filter=True,
+                                   initial_prompt="Top 3 small-cap stocks watchlist. Tickers, VWAP, premarket high, targets in dollars.")
         return [{"t": round(s.start, 1), "text": s.text.strip()} for s in segs], None
     except Exception as e:
         return None, f"speech-to-text failed ({e})"
 
 
 TOKEN = re.compile(r"\$?\b[A-Z]{2,5}\b")
+LONE = re.compile(r"^[^A-Za-z0-9]*\$?([A-Z]{2,5})[^A-Za-z0-9]*$")
 PRICE = re.compile(r"\$\s?\d{1,4}(?:\.\d{1,3})?|\b\d{1,3}\.\d{1,3}\b")
 
 
+def is_english(word):
+    try:
+        from wordfreq import zipf_frequency
+        return zipf_frequency(word.lower(), "en") >= 3.3
+    except Exception:
+        return False
+
+
+def spoken_count(sym, text):
+    """Ticker said as letters ('S T A K', 'S.T.A.K') or as a non-dictionary word ('STAK')."""
+    n = len(re.findall(r"\b" + r"[\s\.\-]+".join(sym) + r"\b", text, flags=re.I))
+    if not is_english(sym):
+        n += len(re.findall(r"\b" + sym + r"\b", text, flags=re.I))
+    return n
+
+
 def pick_tickers(frames, transcript, symbols):
-    seen = collections.defaultdict(set)
+    """Chart labels are big standalone words; captions are sentences. Score accordingly."""
+    lone = collections.defaultdict(set)
+    inline = collections.defaultdict(set)
     for fr in frames:
-        for tok in TOKEN.findall(fr["text"]):
-            s = tok.lstrip("$")
-            if s in STOP or (symbols and s not in symbols):
-                continue
-            seen[s].add(fr["t"])
-    spoken = collections.Counter()
-    if transcript:
-        full = " ".join(x["text"] for x in transcript)
-        for s in seen:
-            spelled = r"\b" + r"[\s\.\-]*".join(s) + r"\b"
-            spoken[s] = len(re.findall(spelled, full, flags=re.I))
-    scored = sorted(seen, key=lambda s: (len(seen[s]) + 3 * spoken[s]), reverse=True)
-    cands = [{"ticker": s, "frames": len(seen[s]), "first_second": min(seen[s]), "spoken": spoken[s]}
-             for s in scored if len(seen[s]) >= 2 or spoken[s] > 0][:8]
-    return cands
+        for line in fr["text"].splitlines():
+            line = line.strip()
+            m = LONE.match(line)
+            toks = [m.group(1)] if m else [t.lstrip("$") for t in TOKEN.findall(line)]
+            for s in toks:
+                if s in STOP or (symbols and s not in symbols):
+                    continue
+                (lone if m else inline)[s].add(fr["t"])
+                if line.startswith("$") or ("$" + s) in line:
+                    lone[s].add(fr["t"])  # cashtags count as strong
+    full = " ".join(x["text"] for x in transcript) if transcript else ""
+    cands = []
+    for s in set(lone) | set(inline):
+        sp = spoken_count(s, full) if full else 0
+        eng = is_english(s)
+        score = 3 * len(lone[s]) + 0.5 * len(inline[s]) + 6 * sp - (8 if eng and sp == 0 else 0)
+        times = lone[s] | inline[s]
+        cands.append({"ticker": s, "score": round(score, 1), "label_frames": len(lone[s]),
+                      "caption_frames": len(inline[s]), "spoken": sp, "english_word": eng,
+                      "first_second": min(times)})
+    cands.sort(key=lambda c: c["score"], reverse=True)
+    return [c for c in cands if c["score"] > 0][:10]
+
+
+def confident(c):
+    return c["spoken"] > 0 or (c["label_frames"] >= 3 and not c["english_word"])
+
+
+def ocr_timeline(frames):
+    """Readable on-screen text by second, de-duplicated, for the Claude run to interpret."""
+    out, prev = [], set()
+    for fr in frames:
+        lines = []
+        for ln in fr["text"].splitlines():
+            ln = ln.strip()
+            good = sum(ch.isalnum() or ch in " $.%" for ch in ln)
+            if len(ln) >= 3 and good / len(ln) > 0.8 and re.search(r"[A-Za-z$0-9]{2}", ln):
+                lines.append(ln)
+        cur = set(lines)
+        new = [l for l in dict.fromkeys(lines) if l not in prev]
+        if new:
+            out.append({"t": fr["t"], "text": " | ".join(new)[:300]})
+        prev = cur
+    return out[:300]
 
 
 def plan_by_ticker(tickers, transcript):
@@ -290,14 +346,15 @@ def main():
         rec["tickers"] = [c["ticker"] for c in cands[:3]]
         rec["plan"] = plan_by_ticker(rec["tickers"], transcript)
         rec["transcript"] = transcript
-        rec["ocr_lines"] = sorted({ln.strip() for fr in frames for ln in fr["text"].splitlines()
-                                   if len(ln.strip()) >= 3 and re.search(r"[A-Za-z$]", ln)})[:400]
+        rec["ocr_timeline"] = ocr_timeline(frames)
         rec["keyframes"] = save_keyframes(frames, cands, target.isoformat()) if cands else []
-        if len(rec["tickers"]) >= 3:
+        sure = [c["ticker"] for c in cands[:3] if confident(c)]
+        if len(sure) >= 3:
             rec["status"] = "ok"
         else:
             rec["status"] = "partial"
-            rec["reason"] = f"Only found {len(rec['tickers'])} ticker(s) in the video"
+            rec["reason"] = (f"Low confidence: {len(sure)} of the top 3 tickers were confirmed by speech or "
+                             f"repeated chart labels. Read transcript and ocr_timeline to decide.")
     except Exception as e:
         rec["status"] = "failed"
         rec["reason"] = str(e)[:500]
