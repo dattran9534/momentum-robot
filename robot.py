@@ -88,9 +88,9 @@ def title_matches(title, target):
     return None
 
 
-def find_reel(target):
+def find_reel(target, sources=SOURCES):
     errors = []
-    for name, url in SOURCES:
+    for name, url in sources:
         r = run(["yt-dlp", "--flat-playlist", "-J", "--playlist-end", "8", url], timeout=180)
         if r.returncode != 0:
             errors.append(f"{name}: listing failed ({(r.stderr or '').strip().splitlines()[-1:] or ['?']})")
@@ -117,16 +117,26 @@ def find_reel(target):
     return None, errors
 
 
-def download(url):
-    shutil.rmtree(WORK, ignore_errors=True)
-    os.makedirs(WORK)
-    out = os.path.join(WORK, "video.%(ext)s")
-    r = run(["yt-dlp", "-f", "bv*[height<=1080]+ba/b[height<=1080]/b", "--merge-output-format", "mp4",
-             "-o", out, url], timeout=600)
-    files = glob.glob(os.path.join(WORK, "video.*"))
-    if r.returncode != 0 or not files:
-        raise RuntimeError("download failed: " + ((r.stderr or "").strip().splitlines() or ["?"])[-1])
-    return files[0]
+YT_CLIENTS = [None, "youtube:player_client=tv_embedded,web_embedded", "youtube:player_client=ios,mweb",
+              "youtube:player_client=tv,web_safari"]
+
+
+def download(url, source):
+    """Try a few download variants; YouTube often bot-checks GitHub's servers."""
+    last = "?"
+    for extra in (YT_CLIENTS if source == "youtube" else [None]):
+        shutil.rmtree(WORK, ignore_errors=True)
+        os.makedirs(WORK)
+        out = os.path.join(WORK, "video.%(ext)s")
+        cmd = ["yt-dlp", "-f", "bv*[height<=1080]+ba/b[height<=1080]/b", "--merge-output-format", "mp4", "-o", out]
+        if extra:
+            cmd += ["--extractor-args", extra]
+        r = run(cmd + [url], timeout=600)
+        files = glob.glob(os.path.join(WORK, "video.*"))
+        if r.returncode == 0 and files:
+            return files[0]
+        last = ((r.stderr or "").strip().splitlines() or ["?"])[-1][:200]
+    raise RuntimeError(f"{source} download failed: {last}")
 
 
 def ocr_frames(video):
@@ -250,13 +260,25 @@ def main():
             reel, errors = {"source": "local", "url": a.local_video, "title": "local test", "match": "test"}, []
             video = a.local_video
         else:
-            reel, errors = find_reel(target)
+            reel, video, errors = None, None, []
+            for name, url in SOURCES:
+                cand, errs = find_reel(target, [(name, url)])
+                errors += errs
+                if not cand:
+                    continue
+                try:
+                    video = download(cand["url"], cand["source"])
+                    reel = cand
+                    break
+                except Exception as e:
+                    errors.append(str(e))
             rec["source_errors"] = errors
-            if not reel:
-                rec["reason"] = "Reel not found yet: " + "; ".join(errors)
+            if not video:
+                rec["status"] = "failed" if any("download failed" in e for e in errors) else "pending"
+                rec["reason"] = ("Reel found but every download was blocked: " if rec["status"] == "failed"
+                                 else "Reel not found yet: ") + "; ".join(errors)
                 write(rec)
                 return
-            video = download(reel["url"])
         rec["reel"] = reel
         frames = ocr_frames(video)
         transcript, terr = transcribe(video)
