@@ -30,10 +30,12 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr ffmpeg
-          pip install -q -U yt-dlp faster-whisper pillow
+          pip install -q -U yt-dlp faster-whisper pillow numpy
+          pip install -q wordfreq || echo "wordfreq unavailable; continuing without English-word filter"
 
       - name: Read the newest reel
-        run: python robot.py
+        # A manual "Run workflow" always re-reads the reel; scheduled runs skip if already captured
+        run: python robot.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
 
       - name: Save results
         run: |
