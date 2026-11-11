@@ -1,12 +1,12 @@
 {
   "target_date": "2026-11-11",
   "target_label": "Wed 11/11/26",
-  "checked_at": "2026-11-10T22:28-05:00",
-  "status": "ok",
+  "checked_at": "2026-11-10T22:35-05:00",
+  "status": "partial",
   "tickers": [
-    "LIVE",
     "AN",
-    "LI"
+    "PXLW",
+    "WCT"
   ],
   "source_errors": [
     "youtube download failed: ERROR: [youtube] t_4k20Srwx4: Sign in to confirm you\u2019re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-d"
@@ -17,477 +17,942 @@
     "title": "TOP 3 STOCKS WEDNESDAY 11/11/26 TRADING DAY WATCHLIST Last week we FI...",
     "match": "strong"
   },
-  "transcript_error": "speech-to-text failed (open() got an unexpected keyword argument 'metadata_errors')",
   "candidates": [
     {
-      "ticker": "LIVE",
-      "frames": 16,
-      "first_second": 14,
-      "spoken": 0
-    },
-    {
       "ticker": "AN",
-      "frames": 13,
-      "first_second": 92,
-      "spoken": 0
+      "score": 31.0,
+      "label_frames": 13,
+      "caption_frames": 0,
+      "spoken": 0,
+      "english_word": true,
+      "first_second": 92
     },
     {
-      "ticker": "LI",
-      "frames": 5,
-      "first_second": 140,
-      "spoken": 0
+      "ticker": "PXLW",
+      "score": 24.0,
+      "label_frames": 2,
+      "caption_frames": 0,
+      "spoken": 3,
+      "english_word": false,
+      "first_second": 61
     },
     {
-      "ticker": "WEN",
-      "frames": 5,
-      "first_second": 144,
-      "spoken": 0
+      "ticker": "WCT",
+      "score": 15.0,
+      "label_frames": 3,
+      "caption_frames": 0,
+      "spoken": 1,
+      "english_word": false,
+      "first_second": 108
     },
     {
-      "ticker": "EEE",
-      "frames": 4,
-      "first_second": 17,
-      "spoken": 0
+      "ticker": "LIVE",
+      "score": 12.5,
+      "label_frames": 5,
+      "caption_frames": 11,
+      "spoken": 0,
+      "english_word": true,
+      "first_second": 14
     },
     {
       "ticker": "SY",
-      "frames": 4,
-      "first_second": 96,
-      "spoken": 0
+      "score": 12.0,
+      "label_frames": 4,
+      "caption_frames": 0,
+      "spoken": 0,
+      "english_word": false,
+      "first_second": 96
     },
     {
-      "ticker": "EE",
-      "frames": 3,
-      "first_second": 6,
-      "spoken": 0
+      "ticker": "EEE",
+      "score": 9.5,
+      "label_frames": 3,
+      "caption_frames": 1,
+      "spoken": 0,
+      "english_word": false,
+      "first_second": 17
+    },
+    {
+      "ticker": "CHSN",
+      "score": 9.0,
+      "label_frames": 1,
+      "caption_frames": 0,
+      "spoken": 1,
+      "english_word": false,
+      "first_second": 34
     },
     {
       "ticker": "ZG",
-      "frames": 3,
-      "first_second": 51,
-      "spoken": 0
+      "score": 9.0,
+      "label_frames": 3,
+      "caption_frames": 0,
+      "spoken": 0,
+      "english_word": false,
+      "first_second": 51
+    },
+    {
+      "ticker": "LI",
+      "score": 7.0,
+      "label_frames": 5,
+      "caption_frames": 0,
+      "spoken": 0,
+      "english_word": true,
+      "first_second": 140
+    },
+    {
+      "ticker": "WEN",
+      "score": 7.0,
+      "label_frames": 5,
+      "caption_frames": 0,
+      "spoken": 0,
+      "english_word": true,
+      "first_second": 144
     }
   ],
   "plan": {
-    "LIVE": {
-      "said": [],
-      "prices": []
-    },
     "AN": {
-      "said": [],
+      "said": [
+        "You are an idiot if you're not watching these 3 stocks for Wednesday's trading day."
+      ],
       "prices": []
     },
-    "LI": {
-      "said": [],
-      "prices": []
+    "PXLW": {
+      "said": [
+        "Now, today I had one of my best days of 2026. This big 3000% squeezer on OMH had stocks like PXLW squeezing this morning on news with META.",
+        "And I made that thing my b**** this morning in the live trading stream.",
+        "And before you say, but Kev, the market's closed tomorrow. No, the market's open tomorrow for Veterans Day.",
+        "And by the way, thank you for your service.",
+        "As always, I'll be saving the most explosive stock for last, so make sure to watch the full video. Let's go ahead and dive right into it.",
+        "First up on the list is a familiar face. You're probably tired of hearing about it, but I still think it looks fantastic.",
+        "It just hasn't broken out yet over on CHSN.",
+        "Now, again, I want to watch it for tomorrow too, if price can finally break out in a strong way over $3.40.",
+        "And if it can, boy, I hope it does.",
+        "Then if it does, this looks fantastic for fullbacks over 3 for the range back to previous highs to $4.50, $5, $7.50, and even back towards $10 a share.",
+        "Next up, at number two, is the one that got breaking out this morning on MetaVR News.",
+        "Then I caught in the live stream probably 10 times. I want to watch it again for tomorrow too.",
+        "This looks great. One of two ways. This is PXLW.",
+        "I want to watch it if, well, honestly, if it can pull back and find a big buyer over $6.50, hop back over VWAP.",
+        "Maybe this looks good here. But the main way to watch this is if price breaks over the topping tail high over $6.73 or $7.63, excuse me.",
+        "If we get over $7.63, watch your price to pull back and firm back over VWAP over $7.20.",
+        "Then we have range back to the upside over $8.50 all the way to $10 a share.",
+        "Next up, and last but not least, the most explosive stock for Wednesday's pretty nice.",
+        "This simple inside bar setup that looks like it's primed and ready to get breaking out.",
+        "Before I give you my whole plan on this, I gave you the top three stocks in the market every single night for completely free.",
+        "So do me a massive favor. Take like three seconds. Hit the like button to say thank you.",
+        "Hit the follow button too. That way you're tuned in every single night for my top stock watch list just like this.",
+        "and to watch me trade these stocks and so many others in real time just like this morning over on PXLW.",
+        "And to use my stock scanner, trading journal, education, chatroom access, and our new platform and everything else.",
+        "Make sure to go lock in your 7 day free trial as thankfully the market is finally back on fire.",
+        "As always, comment down below which one of these three stocks is your favorite for tomorrow with stocks you're watching for tomorrow.",
+        "And all that said, I hope to catch you back in the stream in the morning for hopefully another big Wednesday in the market ahead.",
+        "I'll catch you guys there."
+      ],
+      "prices": [
+        "$3.40",
+        "$4.50",
+        "$5",
+        "$7.50",
+        "$10",
+        "$6.50",
+        "$6.73",
+        "$7.63",
+        "$7.63",
+        "$7.20",
+        "$8.50",
+        "$10"
+      ]
+    },
+    "WCT": {
+      "said": [
+        "That stock is the one that ran almost 200% just yesterday inside bar setup today over on WCT.",
+        "Which if you recall was also on last night's watch list. Never broke out, but it looks prime for a day three move.",
+        "Now when we get these, they are some of my favorite setups.",
+        "So I want to watch it for a day three move if price can break in a strong way over $5 in like $0.10.",
+        "If price can clear that $5.10 with strength, I want to see price then pull back, retest over VWAP over $4.40.",
+        "If buyers start to step in, confirm I want to look for the range back to previous highs, back towards $6.50,",
+        "and even back through new highs to $8.80 and really $10 a share.",
+        "Even though this looks great, no break, no confirmation, no trade.",
+        "To get access to my entire watch list every night, every morning,"
+      ],
+      "prices": [
+        "$5",
+        "$0.10",
+        "$5.10",
+        "$4.40",
+        "$6.50",
+        "$8.80",
+        "$10"
+      ]
     }
   },
-  "transcript": null,
-  "ocr_lines": [
-    "\"7m",
-    "\"Om",
-    "\"Ps",
-    "$5 AND | >:",
-    "'\u2014m",
-    "(Ne TO.TH THE",
-    "(or. STOCKS",
-    ", a a",
-    ", fA",
-    "- j",
-    "-=S",
-    "-ed of Guessi",
-    ". a a",
-    ". and",
-    ". i a",
-    ".<2 S4",
-    "/ (ASHARE: |",
-    "/ /ASHARE: |",
-    "/ A",
-    "/ ALL.THE WAY.",
-    "/ AWE GET",
-    "/ CAN, BOY!",
-    "/ DOWN BELOW",
-    "/ OVER 3 FOR >\u00bb,",
-    "/ faa",
-    "/ fae",
-    "/ i",
-    "1 i",
-    "2-\"5F",
-    "2.\" t=",
-    "2:20 r",
-    "2:20 re",
-    "2:38 fs",
-    "2AS",
-    "6.20 z",
-    "7 alls THOUGH THIS",
-    "; HIGHS. 8 80. \u00a9",
-    "; HIGHS. 8 80. \u201d",
-    "<a in",
-    "<i i",
-    "= S",
-    "= SS",
-    "= os",
-    "=\" FF",
-    "== nee",
-    "> =S",
-    "> S7",
-    "> S77",
-    "> S79",
-    "> SF",
-    ">\u00bb LIVE | Every Morning",
-    "A Nad",
-    "A a",
-    "A) MASSIVE FAVOUR. _",
-    "A) Nis a",
-    "A) eens",
-    "A/a",
-    "ADAY3/",
-    "AEC c0) :",
-    "AEDS 210) 1:",
-    "AND BEFORE You \u00bb",
-    "AND EVERYTHING ELSE!",
-    "AND OUR NEw",
-    "AS ALWAYS, COMMENT",
-    "AS I WANNA\u2019",
-    "AS IWANNA'",
-    "AS THANKFULLY THE",
-    "ATs",
-    "Aad",
-    "Ae a",
-    "Ae.",
-    "Al Ns YOU",
-    "Att",
-    "Av THOUGH THIS",
-    "Ay VAie-< NEw",
-    "Ay VAie:-< NEw",
-    "BACK TO PREVIOUS",
-    "BE(SAVINGTHE -",
-    "BEFORE | GIVE",
-    "BUTLOOKS PRIME a\u00bb",
-    "BUTLOOKS PRIME ix",
-    "BUYERS START TO",
-    "Bed o",
-    "Bed \u00ae",
-    "CHAT ROOM ACCESS",
-    "CHS",
-    "CHSN_.",
-    "CHaTHE",
-    "CLOSED",
-    "Cal",
-    "Cat",
-    "Cow. : : me",
-    "Cow. \u2018 | me",
-    "DAYS",
-    "Da)",
-    "Dad",
-    "Dah",
-    "Das",
-    "Dg th",
-    "Dn.",
-    "EAM PROBABLY",
-    "EET",
-    "EIN EVERY,",
-    "ERVICE",
-    "ETEST OVER VWAP",
-    "Eee |",
-    "Every Morning",
-    "F conseo",
-    "FAP. FACE.",
-    "FAs BROKE OUT,",
-    "FE.",
-    "FN. TOO.",
-    "FOR HOPEFULLY ANOTHER",
-    "FOR TOMORROW,",
-    "FOR WEDNESDAY",
-    "FOR\u2019 WEDNESDAY",
-    "FREE TRIAL .",
-    "FREE for 7 days No Experience Need",
-    "FREE for 7 days No Experience Needed",
-    "G 3",
-    "G% 3",
-    "GOLOCK IN",
-    "GY 3",
-    "HAD ST OCKS LIKE",
-    "Had",
-    "Hu Wy ls",
-    "I\")",
-    "ICH IF YOU",
-    "IF PRICE CAN | iN",
-    "IKE BUTTON TO",
-    "IN 2",
-    "INS",
-    "INSIDE BAR SETUP",
-    "INTONT",
-    "INTOUNT,",
-    "ISS",
-    "IT JUST HASNii;",
-    "IT JUST HASNiif;",
-    "IXS ALWAYS, COMMENT",
-    "Ih,",
-    "JFANTASTIC FOR PULL",
-    "JOP STOCKS",
-    "Jka if . an",
-    "Join 15,000+ traders preparing for the day's top stocks with Momentum",
-    "Kk_% 6 . an",
-    "L i",
-    "LAST NIGHT'S",
-    "LETsS GOJAHEAD",
-    "LIST EVERY NIGHT,",
-    "LIVE",
-    "LIVE ) Every Morning",
-    "LIVE STREAM PROBABLY ary",
-    "LIVE STREAM PROBABLY \u201caN",
-    "LIVE) Every Morning",
-    "Last BUT NOT",
-    "Lf)",
-    "Lone",
-    "MARKET IS FINALLY",
-    "MN HOPE IT DOES.",
-    "MOET ag",
-    "MOET as",
-    "MOMENT ENG,",
-    "MOMENT Hg",
-    "MOMENT NA Sy,",
-    "MOMENT NGS,",
-    "MOMENT NS,",
-    "MOMENT U4 sy,",
-    "MOMENT U4,",
-    "MOMENT UMS,",
-    "MOMENT UN",
-    "MOMENT UNA Sy,",
-    "MOMENT UNG ,",
-    "MOMENT UNG Sy,",
-    "MOMENT UNS,",
-    "MOMENT UNS.",
-    "MOMENT Un,",
-    "MOMENT Una",
-    "MOMENT Una S,",
-    "MOMENT Una Sy,",
-    "MOMENT Una,",
-    "MOMENT Ung Sy,",
-    "MOMENT Ung,",
-    "MOMENT Us,",
-    "MOMENT age",
-    "MOMENT bay,",
-    "MOMENT nas",
-    "MOMENT nas,",
-    "MOMENT nay,",
-    "MOMENT ng",
-    "MOMENT ng sy,",
-    "MOMENT ng,",
-    "MOMENT ngs,",
-    "MOMENT pas,",
-    "MOMENT pg sy,",
-    "MOMENT pgs,",
-    "MOMENT,",
-    "MOMENTS,",
-    "MOMENTUM",
-    "MOMENTUM Ny",
-    "MOMENTUM Se",
-    "MOMENTUM Sy",
-    "MOMENTUM Sy,",
-    "MOMENTUM Sy.",
-    "MOMENTUM Ye",
-    "MOMENTUM,",
-    "MOMENTUM.",
-    "MOMENTUM:",
-    "MOMENTUMNy",
-    "MOMENTUN Ng,",
-    "MOMENTUN Ny,",
-    "MOMENTUN4sy,",
-    "MOMENTUNG Ny,",
-    "MOMENTUNa\\y,",
-    "MOMENTUNasy,",
-    "MOMENTU\\,",
-    "MOMENTUn4\\,,",
-    "MOMENTUn\\,,",
-    "MOMENTUy\\,,",
-    "MORNING ON NEWS",
-    "MORNING OVER ON",
-    "MOST EXPL Ty STOCK",
-    "MUTE,",
-    "MY BEST",
-    "MY FAVOURITE SETUPS",
-    "MY STOCK SCANNER,",
-    "MY TOP STOCK",
-    "Mas WELL . ! uN",
-    "Mas WELL . a\u00bb.",
-    "Maus ah mm",
-    "Mawes THEN >.",
-    "Me LOOK",
-    "Me THEN on.",
-    "Mee",
-    "Mee un",
-    "Mee \u201cun",
-    "Mh IRMATION,",
-    "Mi Ih",
-    "Mi SHARE.",
-    "Mi. ASTRONG.",
-    "Mi. SHARE.",
-    "MioN",
-    "Mirus al",
-    "Mirus ll",
-    "Mirus sal",
-    "Mirus sal:",
-    "Mirus sll",
-    "Mov Avg Exponential 6.79 MovAvg",
-    "Mov Avg Exponential2",
-    "Mov Avg Exponentiall 6.84 Mov Avg!",
-    "Ms IRMATION,",
-    "Ms THEY",
-    "Ms TOWARDS 6",
-    "Mt lh",
-    "Mt | Bra",
-    "Mt | Rr",
-    "Mt | br iH |",
-    "Mt.",
-    "Mu ware",
-    "Mune 7",
-    "Mune ware",
-    "Mus mare mm",
-    "NIGHT",
-    "NO ERYTO",
-    "NSIDE,.BAR SET",
-    "NSIDE.BAR SET",
-    "NWA",
-    "Na)",
-    "Na@",
-    "Nad",
-    "Nah",
-    "Nas",
-    "Ne.",
-    "Nias",
-    "N\u00e9@",
-    "OES, THIS LOOKS",
-    "OF,",
-    "OKS GOOD |",
-    "OP STOCKS",
-    "OR COMPLETELY FREE. |",
-    "Obs LISTS : . mm",
-    "Obs LISTS : | ms",
-    "PX LW",
-    "PXLW",
-    "Pad",
-    "Pays HAD ONE OF.",
-    "PuMUTEn,",
-    "Puan,",
-    "RAN ALMO",
-    "REAT/",
-    "SE |",
-    "SQUEEZERON 0),",
-    "SQUEEZERON OM,",
-    "SS >\u00bbre",
-    "SSS Sas",
-    "SSS Sma",
-    "SSS Sr",
-    "STOCK FOR WEDNESDAY'S",
-    "STOCKS IN THE",
-    "Sad",
-    "San Si",
-    "Se ee",
-    "Sit",
-    "St ee",
-    "Start You ~Day Free Trial Now!",
-    "Start Your 7-Day Free Trial Now!",
-    "T. 4",
-    "THAT LooKs LIKE",
-    "THAT; THING My",
-    "THAT;THING My",
-    "THAT|STOCK IS ix",
-    "THAT|STOCK IS | ix",
-    "THE MARKET AHEAD.",
-    "THE MARKETS",
-    "THE MOST EXPLOSIVE",
-    "THESE THREE STOCKS",
-    "THIS BIG 3,00",
-    "TIME",
-    "TI]",
-    "TO 4:55,",
-    "TO WAT,",
-    "TO WATCH ME",
-    "TOICATCH Y",
-    "TOMORROW",
-    "TRADE THESE STOCKS",
-    "TRADING \u2014 EDU",
-    "TRADING \u2014_ EDU",
-    "TT]",
-    "TUN",
-    "Tay,",
-    "Tf]",
-    "The 3000% squeeze has sparked the next wave",
-    "This inside bar setup is READY to breakout @",
-    "This inside bar setup is READY to breakout @\u2019",
-    "This inside bar setup is READY to breakout \u00a9",
-    "Tired of Guessing When",
-    "UPSIDE OVER'8:50 |",
-    "VETERANS|DAY",
-    "VWAP 6.48 Mov Avg Exponential2",
-    "Veen,",
-    "Vis",
-    "Vv:",
-    "W SQUEEZING THIS",
-    "W\")",
-    "WANNA SEE",
-    "WAP",
-    "WAP_-",
-    "WAVYATHANKWY OU",
-    "WAY.TO WATCH",
-    "WAYATHANKWY OU",
-    "WCT",
-    "WCT.",
-    "WEEN,",
-    "WEN,",
-    "WHAT STOCKS YOU'RE",
-    "WI!",
-    "WOMENT UNS,",
-    "WP,",
-    "WUE,",
-    "Was",
-    "Watch Me Trade",
-    "Watch Me Trade (\u00aeVE) Every Morning",
-    "Watch Me Trade Every Morning",
-    "Wea,",
-    "Wee,",
-    "Ween,",
-    "Whe",
-    "Wrenn,",
-    "WuUEn,",
-    "WuUTE,,",
-    "WuUTEG,",
-    "WuUTEN,,",
-    "WuUTENG,",
-    "WuUVEN,,",
-    "WuUVEn,",
-    "Ww.",
-    "XY 2",
-    "XY 3",
-    "XY =",
-    "XY =o",
-    "YOUR",
-    "Z=3",
-    "ZEB",
-    "Za \\",
-    "[ MENT",
-    "[ MENT tay",
-    "[Sy",
-    "[UP TODAY OVER",
-    "[eeaat",
-    "\\ JUST LIKE THIS.",
-    "\\/ nie",
-    "\\GUYS THERE!",
-    "\\e.",
-    "\\eeaai",
-    "_ a4",
-    "_ f",
-    "_GOLOCK IN",
-    "_|F |",
-    "_|t_ 7",
-    "a -_\u2014t |",
-    "a Ae"
+  "transcript": [
+    {
+      "t": 0.0,
+      "text": "You are an idiot if you're not watching these 3 stocks for Wednesday's trading day."
+    },
+    {
+      "t": 3.4,
+      "text": "Now, today I had one of my best days of 2026. This big 3000% squeezer on OMH had stocks like PXLW squeezing this morning on news with META."
+    },
+    {
+      "t": 12.5,
+      "text": "And I made that thing my b**** this morning in the live trading stream."
+    },
+    {
+      "t": 15.2,
+      "text": "And before you say, but Kev, the market's closed tomorrow. No, the market's open tomorrow for Veterans Day."
+    },
+    {
+      "t": 19.8,
+      "text": "And by the way, thank you for your service."
+    },
+    {
+      "t": 21.5,
+      "text": "As always, I'll be saving the most explosive stock for last, so make sure to watch the full video. Let's go ahead and dive right into it."
+    },
+    {
+      "t": 26.6,
+      "text": "First up on the list is a familiar face. You're probably tired of hearing about it, but I still think it looks fantastic."
+    },
+    {
+      "t": 32.1,
+      "text": "It just hasn't broken out yet over on CHSN."
+    },
+    {
+      "t": 35.4,
+      "text": "Now, again, I want to watch it for tomorrow too, if price can finally break out in a strong way over $3.40."
+    },
+    {
+      "t": 41.1,
+      "text": "And if it can, boy, I hope it does."
+    },
+    {
+      "t": 42.9,
+      "text": "Then if it does, this looks fantastic for fullbacks over 3 for the range back to previous highs to $4.50, $5, $7.50, and even back towards $10 a share."
+    },
+    {
+      "t": 50.6,
+      "text": "Next up, at number two, is the one that got breaking out this morning on MetaVR News."
+    },
+    {
+      "t": 54.5,
+      "text": "Then I caught in the live stream probably 10 times. I want to watch it again for tomorrow too."
+    },
+    {
+      "t": 58.9,
+      "text": "This looks great. One of two ways. This is PXLW."
+    },
+    {
+      "t": 62.2,
+      "text": "I want to watch it if, well, honestly, if it can pull back and find a big buyer over $6.50, hop back over VWAP."
+    },
+    {
+      "t": 67.9,
+      "text": "Maybe this looks good here. But the main way to watch this is if price breaks over the topping tail high over $6.73 or $7.63, excuse me."
+    },
+    {
+      "t": 75.4,
+      "text": "If we get over $7.63, watch your price to pull back and firm back over VWAP over $7.20."
+    },
+    {
+      "t": 79.6,
+      "text": "Then we have range back to the upside over $8.50 all the way to $10 a share."
+    },
+    {
+      "t": 83.5,
+      "text": "Next up, and last but not least, the most explosive stock for Wednesday's pretty nice."
+    },
+    {
+      "t": 87.4,
+      "text": "This simple inside bar setup that looks like it's primed and ready to get breaking out."
+    },
+    {
+      "t": 91.0,
+      "text": "Before I give you my whole plan on this, I gave you the top three stocks in the market every single night for completely free."
+    },
+    {
+      "t": 95.6,
+      "text": "So do me a massive favor. Take like three seconds. Hit the like button to say thank you."
+    },
+    {
+      "t": 99.0,
+      "text": "Hit the follow button too. That way you're tuned in every single night for my top stock watch list just like this."
+    },
+    {
+      "t": 102.9,
+      "text": "That stock is the one that ran almost 200% just yesterday inside bar setup today over on WCT."
+    },
+    {
+      "t": 108.9,
+      "text": "Which if you recall was also on last night's watch list. Never broke out, but it looks prime for a day three move."
+    },
+    {
+      "t": 113.6,
+      "text": "Now when we get these, they are some of my favorite setups."
+    },
+    {
+      "t": 116.2,
+      "text": "So I want to watch it for a day three move if price can break in a strong way over $5 in like $0.10."
+    },
+    {
+      "t": 121.3,
+      "text": "If price can clear that $5.10 with strength, I want to see price then pull back, retest over VWAP over $4.40."
+    },
+    {
+      "t": 126.6,
+      "text": "If buyers start to step in, confirm I want to look for the range back to previous highs, back towards $6.50,"
+    },
+    {
+      "t": 130.9,
+      "text": "and even back through new highs to $8.80 and really $10 a share."
+    },
+    {
+      "t": 134.0,
+      "text": "Even though this looks great, no break, no confirmation, no trade."
+    },
+    {
+      "t": 137.4,
+      "text": "To get access to my entire watch list every night, every morning,"
+    },
+    {
+      "t": 140.2,
+      "text": "and to watch me trade these stocks and so many others in real time just like this morning over on PXLW."
+    },
+    {
+      "t": 144.8,
+      "text": "And to use my stock scanner, trading journal, education, chatroom access, and our new platform and everything else."
+    },
+    {
+      "t": 149.8,
+      "text": "Make sure to go lock in your 7 day free trial as thankfully the market is finally back on fire."
+    },
+    {
+      "t": 154.4,
+      "text": "As always, comment down below which one of these three stocks is your favorite for tomorrow with stocks you're watching for tomorrow."
+    },
+    {
+      "t": 159.4,
+      "text": "And all that said, I hope to catch you back in the stream in the morning for hopefully another big Wednesday in the market ahead."
+    },
+    {
+      "t": 164.0,
+      "text": "I'll catch you guys there."
+    }
+  ],
+  "ocr_timeline": [
+    {
+      "t": 0,
+      "text": "MOMENTUM Sy. | a STOCKS | FOR WEDNESDAY | The 3000% squeeze has sparked the next wave | This inside bar setup is READY to breakout \u00a9 | (or. STOCKS"
+    },
+    {
+      "t": 1,
+      "text": "moMENTUMNg | OP STOCKS | mooENTUMNg"
+    },
+    {
+      "t": 2,
+      "text": "mooENTUNA | JOP STOCKS | This inside bar setup is READY to breakout @ | monENTUNA SG"
+    },
+    {
+      "t": 3,
+      "text": "FOR\u2019 WEDNESDAY | This inside bar setup is READY to breakout @\u2019 | hon"
+    },
+    {
+      "t": 4,
+      "text": "Pays HAD ONE OF. | ar HAD ONE OF."
+    },
+    {
+      "t": 5,
+      "text": "moMENTUMN. | MY BEST | DAYS | moMENTUMSs."
+    },
+    {
+      "t": 6,
+      "text": "posET NA ye | mostENT NA ge"
+    },
+    {
+      "t": 7,
+      "text": "THIS BIG 3,00 | lia | lai"
+    },
+    {
+      "t": 8,
+      "text": "SQUEEZERON 0), | SQUEEZERON OM,"
+    },
+    {
+      "t": 9,
+      "text": "HAD ST OCKS LIKE"
+    },
+    {
+      "t": 10,
+      "text": "W SQUEEZING THIS | Mov Avg Exponential2 | Mov Avg Exponential 6.79 MovAvg | 7.40 | 7.90 | 7.24 | 7.20 | 7.10 | 7.09 | 678 | 6.70 | 6.60 | 6.00 | 6.40 | 6.30 | 6.20 z | 6.10 1 | 6.10 ;"
+    },
+    {
+      "t": 11,
+      "text": "fre | MORNING ON NEWS | VWAP 6.48 Mov Avg Exponential2 | Mov Avg Exponentiall 6.84 Mov Avg! | 7.30 | 7.16 | han | 7.00 | 6.8765 | 6.90 | 6.80 | ATs | 6.56 | 6.20 | 610"
+    },
+    {
+      "t": 12,
+      "text": "\u2018WITH MET | f Mav Ava Exponenti | vil) iS | f Mav Ava Exponentic | rea | | nN sil"
+    },
+    {
+      "t": 13,
+      "text": "THAT; THING My | Hu Wy ls | THAT;THING My | Ae a"
+    },
+    {
+      "t": 14,
+      "text": "i THE LIVE Aw, Ve. | jit | i THE LIVE e Li Ve,"
+    },
+    {
+      "t": 15,
+      "text": "MOMENTUM Sy | AND BEFORE You \u00bb | yey | MOMENTUM Ny"
+    },
+    {
+      "t": 16,
+      "text": "THE MARKETS | CLOSED | SSS Sas | SSS Sma"
+    },
+    {
+      "t": 17,
+      "text": "moENTUMaSg: | TOMORROW | moMENTUMa Sy: | SSS Sr"
+    },
+    {
+      "t": 18,
+      "text": "| Se ne on | a on | | . ee ee on"
+    },
+    {
+      "t": 19,
+      "text": "poMENTUM Ne | VETERANS|DAY | es a 2 | poMENT UMN | os a 2"
+    },
+    {
+      "t": 20,
+      "text": "WAYATHANKWY OU | WAVYATHANKWY OU"
+    },
+    {
+      "t": 21,
+      "text": "ERVICE | YOUR"
+    },
+    {
+      "t": 22,
+      "text": "MOMENTUM Sy | BE(SAVINGTHE - | yA v | yA N"
+    },
+    {
+      "t": 23,
+      "text": "peer | MOST EXPL Ty STOCK | eee"
+    },
+    {
+      "t": 24,
+      "text": "MOMENTUN Ng, | TO WAT, | CHaTHE | MOMENTUN Ny,"
+    },
+    {
+      "t": 25,
+      "text": "[ MENT | LETsS GOJAHEAD | [ MENT tay"
+    },
+    {
+      "t": 26,
+      "text": "porsT Udy | INTOUNT, | 2754 | port Udy | INTONT | 3.000"
+    },
+    {
+      "t": 27,
+      "text": "Obs LISTS : | ms | Mirus sal | ISS | Obs LISTS : . mm | INS"
+    },
+    {
+      "t": 28,
+      "text": "os FACE. | Vis | FAP. FACE."
+    },
+    {
+      "t": 29,
+      "text": "f vonsea | Mirus al | INS | F conseo | Mirus ll"
+    },
+    {
+      "t": 30,
+      "text": "Cow. \u2018 | me | Mt | Rr | ait | Cow. : : me | Mt | Bra | yes"
+    },
+    {
+      "t": 31,
+      "text": "MOMENT Una, | an Ee | Mirus sal | MOMENT Un, | Mirus sll"
+    },
+    {
+      "t": 32,
+      "text": "IT JUST HASNiif; | NWA | pes | IT JUST HASNii; | Mirus sal:"
+    },
+    {
+      "t": 33,
+      "text": "\u201cne ONC | Mirus sll | \u201cne ONC . | Mirus ll"
+    },
+    {
+      "t": 34,
+      "text": "CHSN_."
+    },
+    {
+      "t": 36,
+      "text": "CHS"
+    },
+    {
+      "t": 37,
+      "text": "i/ MeTOO. 4 | Mirus ll | Mirus sll"
+    },
+    {
+      "t": 38,
+      "text": "aye | Mt | br iH | | IN 2 | aay."
+    },
+    {
+      "t": 39,
+      "text": "Mi. ASTRONG. | ait"
+    },
+    {
+      "t": 40,
+      "text": "| /AND 4 THREE | ae. | Mi Ih | Was | Mt lh | was"
+    },
+    {
+      "t": 41,
+      "text": "MOMENT Ung Sy, | Mirus sll | MOMENT UNG Sy, | Mirus ll | a Ae"
+    },
+    {
+      "t": 42,
+      "text": "MN HOPE IT DOES. | ait | Was"
+    },
+    {
+      "t": 43,
+      "text": "OES, THIS LOOKS | Mt | Bra | INS"
+    },
+    {
+      "t": 44,
+      "text": "Ae. | JFANTASTIC FOR PULL | fan | iru lll | \\eeaai | Ne. | liu lll | [eeaat"
+    },
+    {
+      "t": 45,
+      "text": "awe | yois"
+    },
+    {
+      "t": 46,
+      "text": "MOET as | Nias | MOET ag | ail | Nas"
+    },
+    {
+      "t": 47,
+      "text": "MOMENT Ung, | Mt. | Mirus sal | ie. | Mirus ll"
+    },
+    {
+      "t": 48,
+      "text": "Mirus sll | wax"
+    },
+    {
+      "t": 49,
+      "text": "AEDS 210) 1: | linus fl"
+    },
+    {
+      "t": 50,
+      "text": "Mi. SHARE. | nies ull | Mi SHARE. | ins ull"
+    },
+    {
+      "t": 52,
+      "text": "Kk_% 6 . an | Jka if . an"
+    },
+    {
+      "t": 54,
+      "text": "MOMENTS, | ik ee | MOMENT Us, | ok ee"
+    },
+    {
+      "t": 55,
+      "text": "MOMENT Una | LIVE STREAM PROBABLY ary | 7.03 | MOMENT UN | LIVE STREAM PROBABLY \u201caN"
+    },
+    {
+      "t": 56,
+      "text": "EAM PROBABLY | 2800 | Lone"
+    },
+    {
+      "t": 57,
+      "text": "7.03"
+    },
+    {
+      "t": 59,
+      "text": "Mee | ah ee | eh ee"
+    },
+    {
+      "t": 60,
+      "text": "7.03"
+    },
+    {
+      "t": 61,
+      "text": "PXLW"
+    },
+    {
+      "t": 62,
+      "text": "MOMENT pas, | ft 10.00]"
+    },
+    {
+      "t": 63,
+      "text": "Mas WELL . a\u00bb. | PX LW | Mas WELL . ! uN"
+    },
+    {
+      "t": 64,
+      "text": "MOMENT pgs, | Mune 7 | 7.03 | MOMENT ng sy,"
+    },
+    {
+      "t": 65,
+      "text": "ot mr."
+    },
+    {
+      "t": 67,
+      "text": "MOMENT Ung Sy, | Maus ah mm | 7.03 | Se ee | Mus mare mm"
+    },
+    {
+      "t": 68,
+      "text": "OKS GOOD | | 2747"
+    },
+    {
+      "t": 70,
+      "text": "WAY.TO WATCH"
+    },
+    {
+      "t": 72,
+      "text": "MOMENT ngs, | 7.03 | MOMENT ng,"
+    },
+    {
+      "t": 74,
+      "text": "MioN | San Si"
+    },
+    {
+      "t": 75,
+      "text": "/ AWE GET | cer | 7.03"
+    },
+    {
+      "t": 76,
+      "text": "aes"
+    },
+    {
+      "t": 77,
+      "text": "MOMENTUM: | Mee un | cEl | Mee \u201cun | ZEB"
+    },
+    {
+      "t": 78,
+      "text": "WAP"
+    },
+    {
+      "t": 79,
+      "text": "Me THEN on. | 7.03 | Mawes THEN >."
+    },
+    {
+      "t": 80,
+      "text": "ym TO.TH THE | (Ne TO.TH THE"
+    },
+    {
+      "t": 81,
+      "text": "MOMENT nas, | ie. | UPSIDE OVER'8:50 | | ey. | aan"
+    },
+    {
+      "t": 82,
+      "text": "MOMENT Ung Sy, | / ALL.THE WAY. | ey 2"
+    },
+    {
+      "t": 83,
+      "text": "Pad"
+    },
+    {
+      "t": 84,
+      "text": "Last BUT NOT"
+    },
+    {
+      "t": 85,
+      "text": "porseT Nba Ng: | THE MOST EXPLOSIVE | worse NbaXge"
+    },
+    {
+      "t": 86,
+      "text": "STOCK FOR WEDNESDAY'S | 230"
+    },
+    {
+      "t": 88,
+      "text": "INSIDE BAR SETUP"
+    },
+    {
+      "t": 89,
+      "text": "THAT LooKs LIKE | Dad"
+    },
+    {
+      "t": 90,
+      "text": "MOMENT Una, | MOMENT Un,"
+    },
+    {
+      "t": 91,
+      "text": "BEFORE | GIVE | Dah"
+    },
+    {
+      "t": 92,
+      "text": "Al Ns YOU | Nas | yi Ns YOU | Das"
+    },
+    {
+      "t": 93,
+      "text": "mOMENTUM Se | STOCKS IN THE | MOMENTUM Se | ong | gel"
+    },
+    {
+      "t": 94,
+      "text": "MOMENTUM | Att | NIGHT | MOMENTUMNy"
+    },
+    {
+      "t": 95,
+      "text": "MOMENTUM, | OR COMPLETELY FREE. | | fre"
+    },
+    {
+      "t": 96,
+      "text": "MOMENTUM Ye | A) MASSIVE FAVOUR. _ | 216 | MOMENTUM"
+    },
+    {
+      "t": 97,
+      "text": "2AS"
+    },
+    {
+      "t": 98,
+      "text": "MOMENTUM Sy, | IKE BUTTON TO"
+    },
+    {
+      "t": 99,
+      "text": "FN. TOO. | St ee"
+    },
+    {
+      "t": 100,
+      "text": "TUN | EIN EVERY, | itl | Sit"
+    },
+    {
+      "t": 101,
+      "text": "MOMENT age | MY TOP STOCK | momMET age | Nas"
+    },
+    {
+      "t": 102,
+      "text": "\\ JUST LIKE THIS."
+    },
+    {
+      "t": 103,
+      "text": "MOMENT nay, | THAT|STOCK IS | ix | es Se ll | MOMENT bay, | THAT|STOCK IS ix | es See ll | Dg th"
+    },
+    {
+      "t": 104,
+      "text": "RAN ALMO | wa. ix"
+    },
+    {
+      "t": 105,
+      "text": "mooENT Ady, | bust YESTERDAY. \u00bb | aN. | bust YESTERDAY. iN"
+    },
+    {
+      "t": 106,
+      "text": "MOMENT UMS, | FE. | NSIDE.BAR SET | Dn. | MOMENTUM Sy, | NSIDE,.BAR SET"
+    },
+    {
+      "t": 107,
+      "text": "MOMENTUN4sy, | [UP TODAY OVER | MOMENTUNasy,"
+    },
+    {
+      "t": 108,
+      "text": "WCT | mm at | maa"
+    },
+    {
+      "t": 109,
+      "text": "MOMENT UNS, | ICH IF YOU | WCT. | MOMENT Una Sy,"
+    },
+    {
+      "t": 110,
+      "text": "MOMENT, | LAST NIGHT'S"
+    },
+    {
+      "t": 111,
+      "text": "FAs BROKE OUT, | Das"
+    },
+    {
+      "t": 112,
+      "text": "BUTLOOKS PRIME a\u00bb | BUTLOOKS PRIME ix"
+    },
+    {
+      "t": 113,
+      "text": "i im"
+    },
+    {
+      "t": 114,
+      "text": "Ms THEY | iit"
+    },
+    {
+      "t": 115,
+      "text": "MY FAVOURITE SETUPS"
+    },
+    {
+      "t": 116,
+      "text": "AS I WANNA\u2019 | AS IWANNA'"
+    },
+    {
+      "t": 117,
+      "text": "sees | ADAY3/ | seen"
+    },
+    {
+      "t": 119,
+      "text": "etl"
+    },
+    {
+      "t": 121,
+      "text": "IF PRICE CAN | iN"
+    },
+    {
+      "t": 123,
+      "text": "WANNA SEE"
+    },
+    {
+      "t": 125,
+      "text": "MOMENT ng | ETEST OVER VWAP | MOMENT Hg"
+    },
+    {
+      "t": 126,
+      "text": "| OVER 40 IF | EET | etl | Dah"
+    },
+    {
+      "t": 127,
+      "text": "MOMENT Ung, | BUYERS START TO"
+    },
+    {
+      "t": 128,
+      "text": "ie. | Me LOOK"
+    },
+    {
+      "t": 129,
+      "text": "BACK TO PREVIOUS"
+    },
+    {
+      "t": 130,
+      "text": "Ms TOWARDS 6"
+    },
+    {
+      "t": 131,
+      "text": "Ay VAie-< NEw"
+    },
+    {
+      "t": 132,
+      "text": "; HIGHS. 8 80. \u00a9 | ; HIGHS. 8 80. \u201d"
+    },
+    {
+      "t": 133,
+      "text": "t Nad | A Nad"
+    },
+    {
+      "t": 134,
+      "text": "7 alls THOUGH THIS | Av THOUGH THIS | Nah"
+    },
+    {
+      "t": 135,
+      "text": "MOMENT ENG, | A) Nis a | Cal | A Nad | MOMENT NGS, | A) eens | Nad"
+    },
+    {
+      "t": 136,
+      "text": "Mh IRMATION, | Cat | Ms IRMATION, | t Nad"
+    },
+    {
+      "t": 137,
+      "text": "traders preparing for the day's top stocks with Mor | NO ERYTO | -ed of Guessi | Whe | to Buy & Sell Stocks\u2019 | ch Me Trade LIVE) Every i: | FREE for 7 days No Experience Need | to Buy & Sell Stocks* | ch Me Trade (LIVE) Every i:"
+    },
+    {
+      "t": 138,
+      "text": "Mune ware | Join 15,000+ traders preparing for the day's top stocks with Momentum | Tired of Guessing When | to Buy & Sell Stocks? | Watch Me Trade | Every Morning | FREE for 7 days No Experience Needed | PuMUTEn, | ail these & | Start You ~Day Free Trial Now! | Mu ware | rallithosets<"
+    },
+    {
+      "t": 139,
+      "text": "MOMENT Una, | LIST EVERY NIGHT, | MOMENTUM. | WuUEn, | mo me | ail these ni | Start Your 7-Day Free Trial Now! | a ae | fallithoselsame"
+    },
+    {
+      "t": 140,
+      "text": "soENT Dba Sg: | TO WATCH ME | cay | XY 2 | all these & | moENT Dna Sg: | rallithosets<"
+    },
+    {
+      "t": 141,
+      "text": "wOoENT Aye | TRADE THESE STOCKS | all those &"
+    },
+    {
+      "t": 142,
+      "text": "MOMENT Una, | TIME | MOMENTUM: | all these sanity | ted | MOMENT Una S, | falitthosefsame."
+    },
+    {
+      "t": 143,
+      "text": "MOMENT nas, | MORNING OVER ON | MOMENTUM. | WuUVEn, | ail those & | raliithosets<"
+    },
+    {
+      "t": 144,
+      "text": "moMENTUM Ss: | Ww. | LIVE ) Every Morning | ail these sai | Aad | fallithosefsame | fad"
+    },
+    {
+      "t": 145,
+      "text": "MOMENTUNG Ny, | MY STOCK SCANNER, | >\u00bb LIVE | Every Morning | GY 3 | fallithoselsame"
+    },
+    {
+      "t": 146,
+      "text": "TRADING \u2014_ EDU | LIVE ) Every Morning | eee | all these i | TRADING \u2014 EDU | faliithoselsame"
+    },
+    {
+      "t": 147,
+      "text": "CHAT ROOM ACCESS | MOMENTUM. | all these ai | MOMENT Us, | fallithoselsame"
+    },
+    {
+      "t": 148,
+      "text": "AND OUR NEw | and | all these ani | . and"
+    },
+    {
+      "t": 149,
+      "text": "MOMENT Una, | AND EVERYTHING ELSE! | MOMENTUM. | ail these sai | GY 3"
+    },
+    {
+      "t": 150,
+      "text": "MOMENTUNa\\y, | _GOLOCK IN | Had | MOMENT, | GOLOCK IN | aan"
+    },
+    {
+      "t": 151,
+      "text": "FREE TRIAL . | Watch Me Trade Every Morning | aot | ail) Ghese sanity | a. 2S | 2:38 fs"
+    },
+    {
+      "t": 152,
+      "text": "AS THANKFULLY THE | Watch Me Trade | Every Morning | Wrenn, | ail) these sani | fallithosefsame"
+    },
+    {
+      "t": 153,
+      "text": "MOMENT NA Sy, | MARKET IS FINALLY | LIVE | ail these sai | MOMENT NS, | .<2 S4 | fallithoselsame"
+    },
+    {
+      "t": 154,
+      "text": "MOMENT UNS. | IXS ALWAYS, COMMENT | LIVE) Every Morning | XY 3 | all these & | MOMENT U4 sy, | AS ALWAYS, COMMENT | rallithoseys<"
+    },
+    {
+      "t": 155,
+      "text": "MOMENTUM Sy. | / DOWN BELOW | Watch Me Trade Every Morning"
+    },
+    {
+      "t": 156,
+      "text": "MOMENT nas, | THESE THREE STOCKS | WuUTEG, | XY 2 | MOMENT nas | WuUTENG, | Sad"
+    },
+    {
+      "t": 157,
+      "text": "MOMENT UNG , | FOR TOMORROW, | Watch Me Trade | LIVE | Every Morning | MOMENT U4, | aod"
+    },
+    {
+      "t": 158,
+      "text": "MOMENTUM Sy, | WHAT STOCKS YOU'RE | ail) Ghese sang | ais0 | faliithoselsame | aase"
+    },
+    {
+      "t": 159,
+      "text": "WOMENT UNS, | | AND ALL THAT | Watch Me Trade Every Morning | oul | ail these sami | 2:20 re | fallithosefsame | hd re"
+    },
+    {
+      "t": 160,
+      "text": "MOMENT pg sy, | TOICATCH Y | Watch Me Trade | LIVE | Every Morning | 2:20 r | fallithoselsame"
+    },
+    {
+      "t": 161,
+      "text": "MOMENT nas, | |, MORNING. | MOMENTUM: | Watch Me Trade (\u00aeVE) Every Morning | all these sanity | Bed o | | MORNING. | fallithoselsame."
+    },
+    {
+      "t": 162,
+      "text": "FOR HOPEFULLY ANOTHER | MOMENTUM. | Watch Me Trade | LIVE | Every Morning | aaz8 | ail these si / | Start Your 7-Day Free Trial Now! | aase | fallithosefsame /"
+    },
+    {
+      "t": 163,
+      "text": "MOMENT UNA Sy, | THE MARKET AHEAD. | all these sai / | aise"
+    },
+    {
+      "t": 164,
+      "text": "pooseNT UNA Sy: | \\GUYS THERE! | ail these sami / | aas8 | pooeNT Na Sy: | an fl"
+    }
   ],
   "keyframes": [
-    "data/frames/2026-11-11/LIVE.jpg",
     "data/frames/2026-11-11/AN.jpg",
-    "data/frames/2026-11-11/LI.jpg"
-  ]
+    "data/frames/2026-11-11/PXLW.jpg",
+    "data/frames/2026-11-11/WCT.jpg"
+  ],
+  "reason": "Low confidence: 2 of the top 3 tickers were confirmed by speech or repeated chart labels. Read transcript and ocr_timeline to decide."
 }
