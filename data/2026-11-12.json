@@ -1,0 +1,12 @@
+{
+  "target_date": "2026-11-12",
+  "target_label": "Thu 11/12/26",
+  "checked_at": "2026-11-11T00:38-05:00",
+  "status": "pending",
+  "tickers": [],
+  "source_errors": [
+    "youtube: no reel titled for Thursday 11/12 among the newest 8 posts",
+    "tiktok: no reel titled for Thursday 11/12 among the newest 8 posts"
+  ],
+  "reason": "Reel not found yet: youtube: no reel titled for Thursday 11/12 among the newest 8 posts; tiktok: no reel titled for Thursday 11/12 among the newest 8 posts"
+}
